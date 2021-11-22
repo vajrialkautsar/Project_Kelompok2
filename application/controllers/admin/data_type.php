@@ -66,7 +66,6 @@ class data_type extends CI_Controller{
             $id                     = $this->input->post('id_type');
             $kode_type              = $this->input->post('kode_type');
             $nama_type              = $this->input->post('nama_type');
-
             $data = array (
                 'kode_type' => $kode_type,
                 'nama_type' => $nama_type

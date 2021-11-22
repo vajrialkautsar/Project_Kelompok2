@@ -32,11 +32,7 @@
                     <a class="btn btn-sm btn-danger" href="<?php echo base_url('admin/data_type/delete_type/'.$tp->id_type) ?>"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
-
             <?php endforeach; ?>
         </tbody>
     </table>
-
-
 </div>
-

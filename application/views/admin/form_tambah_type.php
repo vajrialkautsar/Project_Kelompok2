@@ -5,7 +5,6 @@
         </div>
     </div>
 
-
     <form method="POST" action="<?php echo base_url('admin/data_type/tambah_type_aksi') ?>">
 
         <div class="form-group">
