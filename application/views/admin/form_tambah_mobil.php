@@ -77,7 +77,7 @@
 
                     </div>
                     <div class="col-md-6">
-
+                        
                         <div class="form-group">
                                 <label>Harga Sewa/Hari</label>
                                 <input type="number" name="harga" class="form-control">
