@@ -1,6 +1,6 @@
 
     <footer class="site-footer"> 
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row pt-5 mt-5 text-center fixed-bottom">
           <div class="col-md-12">
             <div class="border-top pt-2">
               <p>

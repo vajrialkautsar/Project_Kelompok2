@@ -59,9 +59,10 @@
               
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                <ul class="site-menu main-menu js-clone-nav ml-auto">
                   <li class=""><a href="<?php echo base_url('customer/dashboard') ?>" class="nav-link">BERANDA</a></li>
                   <li><a href="<?php echo base_url('customer/data_mobil')?>" class="nav-link">MOBIL</a></li>
+                  <li><a href="<?php echo base_url('customer/transaksi')?>" class="nav-link">TRANSAKSI</a></li>
                   <li><a href="<?php echo base_url('register')?>" class="nav-link">REGISTER</a></li>
                   <?php if($this->session->userdata('nama')) { ?>
                     <li><a href="<?php echo base_url('auth/logout')?>" class="nav-link">WELCOME <?php echo $this->session->userdata('nama') ?><span> | LOGOUT</span></a></li>
