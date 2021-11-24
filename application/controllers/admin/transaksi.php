@@ -82,13 +82,33 @@ class transaksi extends CI_Controller
         );
 
         $this->rental_model->update_data('transaksi', $data, $where);
-        $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
             Transaksi Berhasil Diupdate.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
             </div>');
         redirect('admin/transaksi');
+    }
+
+    public function transaksi_batal($id)
+    {
+        $where = array('id_rental' => $id);
+        $data = $this->rental_model->get_where($where,'transaksi')->row();
+
+        $where2 = array('id_mobil' => $data->id_mobil);
+
+        $data2 = array('status' => '1');
+
+        $this->rental_model->update_data('mobil', $data2,$where2);
+        $this->rental_model->delete_data($where,'transaksi');
+        $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Transaksi Berhasil Dibatalkan.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>');
+        redirect ('admin/transaksi');
     }
     
 }
