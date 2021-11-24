@@ -52,7 +52,12 @@ class transaksi extends CI_Controller{
             </button>
             </div>');
         redirect('customer/transaksi');
+    }
 
+    public function cetak_invoice($id)
+    {
+        $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, mobil mb, customer cs WHERE tr.id_mobil=mb.id_mobil AND tr.id_customer=cs.id_customer AND tr.id_rental='$id'")->result();
+        $this->load->view('customer/cetak_invoice',$data);
     }
 
 }
