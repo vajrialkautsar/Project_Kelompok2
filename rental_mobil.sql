@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2021 at 04:13 AM
+-- Generation Time: Nov 24, 2021 at 03:23 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -57,11 +57,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `nama`, `username`, `alamat`, `gender`, `no_telepon`, `no_ktp`, `password`, `role_id`) VALUES
-(2, 'KELOMPOK 1', 'kelompok1best', 'Jl. Tanuwijaya', 'Laki-Laki', '081111xxxx', '3288000xxxxxxxx', 'ee926b6c60ad074dba2bd3f0f27a7c10', 0),
-(4, 'Hilton', 'hilton123', 'hilton@gmail.com', 'Laki-Laki', '088xxxxx', '321xxxxx', 'da5dcaa3d6bbf067fd1e54ad430cc6a2', 0),
-(5, 'edo', 'adi', 'bandung', 'Laki-Laki', '123xxxx', '23xxxxxxxxx', 'c46335eb267e2e1cde5b017acb4cd799', 2),
-(6, 'Habil', 'admin', 'bekasi', 'Laki-Laki', '8392749749xxxx', '389289247947xxxxx', '21232f297a57a5a743894a0e4a801fc3', 1),
-(8, 'kelompok1', 'kelompok1', 'tasik', 'Perempuan', '09xxxx', '123xxxx', '00aeb408ba8314c4abb0c36024d42c48', 2);
+(5, 'edo', 'adi', 'bandung', 'Laki-Laki', '123xxxx', '23xxxxxxxxx', '202cb962ac59075b964b07152d234b70', 2),
+(9, 'admin', 'admin2', 'hihi', 'Perempuan', '1', '2', 'c84258e9c39059a89ab77d846ddab909', 1),
+(10, 'dimas', 'dimas', 'pdk', 'Laki-Laki', '11111', '321', '7d49e40f4b3d8f68c19406a58303f826', 2),
+(11, 'admin3', 'admin3', 'ubsi', 'Perempuan', '123xxx', '12344xxx', '32cacb2f994f6b42183a1300d9a3e8d6', 1);
 
 -- --------------------------------------------------------
 
@@ -77,6 +76,12 @@ CREATE TABLE `mobil` (
   `warna` varchar(20) NOT NULL,
   `tahun` varchar(4) NOT NULL,
   `status` varchar(50) NOT NULL,
+  `harga` int(11) NOT NULL,
+  `denda` int(11) NOT NULL,
+  `ac` int(11) NOT NULL,
+  `supir` int(11) NOT NULL,
+  `mp3_player` int(11) NOT NULL,
+  `central_lock` int(11) NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -84,9 +89,12 @@ CREATE TABLE `mobil` (
 -- Dumping data for table `mobil`
 --
 
-INSERT INTO `mobil` (`id_mobil`, `kode_type`, `merk`, `no_plat`, `warna`, `tahun`, `status`, `gambar`) VALUES
-(7, 'SDN', 'Avanza', 'D 1854 KL', 'Kuning', '1990', '1', '5.jpg'),
-(8, 'SDN', 'Toyota Camry', 'Z 8712 BN', 'Biru', '2019', '0', '6.jpg');
+INSERT INTO `mobil` (`id_mobil`, `kode_type`, `merk`, `no_plat`, `warna`, `tahun`, `status`, `harga`, `denda`, `ac`, `supir`, `mp3_player`, `central_lock`, `gambar`) VALUES
+(7, 'SDN', 'Avanza', 'D 1854 KL', 'Kuning', '1990', '1', 400000, 150000, 0, 0, 1, 1, '13.jpg'),
+(10, 'SDN', 'CRV', 'B 9 COH', 'Silver', '2019', '0', 500000, 100000, 1, 1, 1, 1, '52.jpg'),
+(12, 'SDN', 'Civic', 'B 1 LAS', 'Biru', '2021', '1', 500000, 200000, 1, 1, 1, 1, '18.jpg'),
+(13, 'SDN', 'Toyota Fortuner', 'D 67 KL', 'Hitam', '2021', '1', 500000, 200000, 1, 1, 1, 1, '101.jpg'),
+(14, 'SDN', 'Vios', 'Z 1 A', 'Biru', '2021', '1', 200000, 100000, 1, 1, 1, 1, '19.jpg');
 
 -- --------------------------------------------------------
 
@@ -116,10 +124,32 @@ CREATE TABLE `transaksi` (
   `id_mobil` int(11) NOT NULL,
   `tanggal_rental` date NOT NULL,
   `tanggal_kembali` date NOT NULL,
+  `harga` varchar(120) NOT NULL,
+  `denda` varchar(125) NOT NULL,
+  `total_denda` varchar(120) NOT NULL,
   `tanggal_pengembalian` date NOT NULL,
+  `status_pengembalian` varchar(50) NOT NULL,
   `status_rental` varchar(50) NOT NULL,
-  `status_pengembalian` varchar(50) NOT NULL
+  `bukti_pembayaran` varchar(120) NOT NULL,
+  `status_pembayaran` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_rental`, `id_customer`, `id_mobil`, `tanggal_rental`, `tanggal_kembali`, `harga`, `denda`, `total_denda`, `tanggal_pengembalian`, `status_pengembalian`, `status_rental`, `bukti_pembayaran`, `status_pembayaran`) VALUES
+(4, 5, 0, '2021-11-02', '2021-11-05', '200000', '50000', '', '0000-00-00', 'Kembali', 'Belum Selesai', '', 0),
+(5, 5, 0, '2021-11-02', '2021-11-08', '400000', '150000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(6, 5, 0, '0000-00-00', '0000-00-00', '400000', '150000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(7, 5, 0, '2021-11-19', '2021-11-23', '500000', '100000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(8, 5, 0, '2021-11-01', '2021-11-02', '400000', '150000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(9, 5, 0, '2021-11-08', '2021-11-09', '200000', '50000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(10, 5, 0, '2021-11-01', '2021-11-02', '400000', '150000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(11, 5, 0, '0000-00-00', '0000-00-00', '200000', '50000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(12, 5, 0, '2021-11-02', '2021-11-03', '500000', '100000', '', '0000-00-00', '', 'Belum Selesai', '', 0),
+(13, 5, 10, '2021-11-09', '2021-11-11', '500000', '100000', '200000', '2021-11-13', 'Kembali', 'Selesai', 'bukti2.png', 1),
+(15, 10, 11, '2021-11-01', '2021-11-02', '200000', '50000', '2200000', '2021-12-16', 'Kembali', 'Selesai', '', 0);
 
 -- --------------------------------------------------------
 
@@ -194,13 +224,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `mobil`
 --
 ALTER TABLE `mobil`
-  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `rental`
@@ -212,7 +242,7 @@ ALTER TABLE `rental`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `type`

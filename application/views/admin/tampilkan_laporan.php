@@ -21,6 +21,11 @@
         <button type="submit" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Tampilkan Data</button>
 
     </form>
+    <hr>
+
+    <div class="btn-group">
+        <a class="btn btn-sm btn-success" target="_blank" href="<?php echo base_url().'admin/laporan/print_laporan/?dari='.set_value('dari'). '&sampai='.set_value('sampai') ?>"><i class="fas fa-print"></i> Cetak Laporan</a>
+    </div>
 
     <div class="table-responsive mt-3">
         <span class="mt-2 p2"><?php echo $this->session->flashdata('pesan') ?></span>
