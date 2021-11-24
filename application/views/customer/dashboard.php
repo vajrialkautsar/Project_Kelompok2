@@ -1,5 +1,3 @@
-
-
     <div class="ftco-blocks-cover-1">
       <div class="ftco-cover-1 overlay" style="background-image: url('<?php echo base_url()?>assets/assets_shop/images/hero_1.jpg');">')">
         <div class="container">
@@ -83,8 +81,6 @@
       </div>
     </div>
 
-    
-
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -98,9 +94,6 @@
             </p>
           </div>
           <div class="col-lg-9">
-
-
-
 
             <div class="nonloop-block-13 owl-carousel">
               <div class="item-1">
@@ -141,7 +134,6 @@
                 </div>
               </div>
 
-
               <div class="item-1">
                 <a href="#"><img src="<?php echo base_url()?>assets/assets_shop/images/img_2.jpg" alt="Image" class="img-fluid"></a>
                 <div class="item-1-contents">
@@ -179,9 +171,7 @@
                   </div>
                 </div>
               </div>
-
             </div>
-            
           </div>
         </div>
       </div>
@@ -232,7 +222,6 @@
       </div>
     </div>
 
-
     <div class="container site-section mb-5">
       <div class="row justify-content-center text-center">
         <div class="col-7 text-center mb-5">
@@ -264,7 +253,6 @@
 
       </div>
     </div>
-    
     
     <div class="site-section bg-light">
       <div class="container">
@@ -312,7 +300,6 @@
       </div>
     </div>
 
-
     <div class="site-section bg-white">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
@@ -330,7 +317,6 @@
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
-                
                 <h2><a href="single.html">The best car rent in the entire planet</a></h2>
                 <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
@@ -344,7 +330,6 @@
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
-                
                 <h2><a href="single.html">The best car rent in the entire planet</a></h2>
                 <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
@@ -359,7 +344,6 @@
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
-                
                 <h2><a href="single.html">The best car rent in the entire planet</a></h2>
                 <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>

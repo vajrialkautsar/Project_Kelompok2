@@ -1,5 +1,19 @@
+<div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('<?php echo base_url()?>assets/assets_shop/images/hero_2.jpg');">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center">
+            <h1>Our For Rent Cars</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
 <div class="container">
-    <div class="card mx-auto" style="margin-top: 180px; width: 80%">
+    <div class="card mx-auto" style="margin-top: 50px; margin-bottom: 50px; width: 80%">
     <div class="card-header">
         Data Transaksi Anda
     </div>

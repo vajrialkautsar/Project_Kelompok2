@@ -1,4 +1,3 @@
-
 <div class="ftco-blocks-cover-1">
     <div class="ftco-cover-1 overlay innerpage" style="background-image: url('<?php echo base_url()?>assets/assets_shop/images/hero_2.jpg');">
     <div class="container">
@@ -11,7 +10,6 @@
     </div>
     </div>
 </div>
-
 
 <section id="car-list-area" class="section-padding">
 <div class="site-section bg-light">

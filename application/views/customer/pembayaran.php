@@ -1,7 +1,21 @@
+<div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('<?php echo base_url()?>assets/assets_shop/images/hero_2.jpg');">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center">
+            <h1>Our For Rent Cars</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-8">
-            <div class="card" style="margin-top: 150px">
+            <div class="card" style="margin-top: 50px; margin-bottom: 50px;">
                 <div class="card-header alert alert-success">
                     Invoice Pembayaran Anda
                 </div>
@@ -62,7 +76,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card" style="margin-top: 150px">
+            <div class="card" style="margin-top: 50px; margin-bottom: 50px;">
                 <div class="card-header alert alert-primary">
                     Informasi Pembayaran
                 </div>
