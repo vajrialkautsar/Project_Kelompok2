@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Car Rent &mdash; Free Website Template by Colorlib</title>
+    <title>RENTAL MOBIL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap">
@@ -31,7 +31,7 @@
           <div class="row align-items-center position-relative">
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="<?php echo base_url()?>assets/assets_shop/index.html">CarRent</a>
+                <a href="<?php echo base_url()?>assets/assets_shop/index.html">RENTAL LUXURY</a>
               </div>
             </div>
             <div class="col-9 text-right">
